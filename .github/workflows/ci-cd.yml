@@ -49,7 +49,7 @@ jobs:
           PGUSER: ${{ secrets.PG_USER }}
           PGPASSWORD: ${{ secrets.PG_PASSWORD }}
         run: |
-          python main.py
+          python scripts/main.py
 
       - name: Run stored procedures
         env:
