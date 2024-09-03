@@ -27,9 +27,15 @@ jobs:
         with:
           python-version: '3.9'
 
-      - name: Install dependencies
+      - name: Install Python dependencies
         run: |
-          pip install -r requirements.txt
+          pip install --upgrade --force-reinstall -r requirements.txt
+
+
+      - name: Verify installed packages
+        run: |
+          pip list
+
 
       - name: Run unit tests
         run: |
