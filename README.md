@@ -15,6 +15,10 @@ A initiative to consolidate payroll data across all of the City of New York's ag
 
             Project Workflow
 
+<img width="521" alt="image" src="https://github.com/user-attachments/assets/453b87bb-76f2-4646-a674-fb28da197913">
+
+
+
             Project Achievement
 1)The business notes that query performance for reporting jobs has increased by 10%, system resource consumption has decreased, and query execution times have significantly decreased,revised system efficiency and quicker report creation are the results of the revised indexing approach.
 2)The company's development process has benefited from the CI/CD deployment, as evidenced by quicker build times and more frequent deployments.
