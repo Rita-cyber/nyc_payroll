@@ -1,4 +1,4 @@
-psycopg2-binary==2.9.6
+psycopg2-binary --use-deprecated=legacy-resolver
 numpy==1.24.4
 packaging==24.1
 pandas==1.5.3
