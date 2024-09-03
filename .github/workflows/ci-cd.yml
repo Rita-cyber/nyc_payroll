@@ -36,10 +36,6 @@ jobs:
         run: |
           pip list
 
-      - name: Test psycopg2 import
-        run: |
-          python -c "import psycopg2"
-
 
 
       - name: Run tests
@@ -54,6 +50,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+
+      - name: Install Python dependencies
+        run: |
+          pip install --upgrade --force-reinstall -r requirements.txt
 
       - name: Set up PostgreSQL
         uses: harmon758/postgresql-action@v1
