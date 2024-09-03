@@ -13,7 +13,7 @@ A initiative to consolidate payroll data across all of the City of New York's ag
 <img width="641" alt="image" src="https://github.com/user-attachments/assets/d8e5b7d8-f5d5-4215-9008-26f2033e3f67">
 
 
-            Project Workflow
+            CI/CD Project Workflow
 
 <img width="521" alt="image" src="https://github.com/user-attachments/assets/453b87bb-76f2-4646-a674-fb28da197913">
 
