@@ -14,6 +14,7 @@ A initiative to consolidate payroll data across all of the City of New York's ag
 
 
             CI/CD Project Workflow
+The CICD workflow was implemented using Github Actions Workflow; the cicd yaml is triggered to run on every push or pull to the main branch.
 
 <img width="521" alt="image" src="https://github.com/user-attachments/assets/453b87bb-76f2-4646-a674-fb28da197913">
 
