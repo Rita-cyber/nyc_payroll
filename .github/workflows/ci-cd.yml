@@ -27,13 +27,14 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.12.4'
-
+          
+      - name: Install Python dependencies
+        run: |
+          pip install --upgrade --force-reinstall -r requirements.txt
 
       - name: Verify installed packages
         run: |
           pip list
-
-
 
       - name: Run tests
         env:
