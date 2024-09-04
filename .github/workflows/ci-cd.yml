@@ -62,18 +62,20 @@ jobs:
       - name: Load data to database
         env:
           PGHOST: ${{ secrets.PG_HOST }}
-          PGDATABASE: ${{ secrets.PG_DB }}
+          PGDATABASE: ${{ secrets.PG_DBNAME }}
           PGUSER: ${{ secrets.PG_USER }}
           PGPASSWORD: ${{ secrets.PG_PASSWORD }}
+          DATABASE_URL: postgres://${{ secrets.PG_USER }}:${{ secrets.PG_PASSWORD }}@${{ secrets.PG_HOST }}:5432/${{ secrets.PG_DB }}
         run: |
           python scripts/main.py
 
       - name: Run stored procedures
         env:
           PGHOST: ${{ secrets.PG_HOST }}
-          PGDATABASE: ${{ secrets.PG_DB }}
+          PGDATABASE: ${{ secrets.PG_DBNAME }}
           PGUSER: ${{ secrets.PG_USER }}
           PGPASSWORD: ${{ secrets.PG_PASSWORD }}
+          DATABASE_URL: postgres://${{ secrets.PG_USER }}:${{ secrets.PG_PASSWORD }}@${{ secrets.PG_HOST }}:5432/${{ secrets.PG_DB }}
         run: |
           psql -h $PGHOST -d $PGDATABASE -U $PGUSER -f proc_data_warehouse.sql
           psql -h $PGHOST -d $PGDATABASE -U $PGUSER -f procedure_datawarehouse.sql
