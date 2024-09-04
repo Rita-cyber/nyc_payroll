@@ -17,10 +17,10 @@ class CSVLoader:
 
         # Establish a connection to the PostgreSQL database
         self.conn = psycopg2.connect(
-            host=localhost,
-            dbname=NYCPayroll,
-            user=postgres,
-            password=Chinwe31#
+            host='localhost',
+            dbname='NYCPayroll',
+            user='postgres',
+            password='Chinwe31#'
         )
         self.cursor = self.conn.cursor()
 
