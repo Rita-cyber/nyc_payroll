@@ -18,7 +18,7 @@ class CSVLoader:
         # Establish a connection to the PostgreSQL database
         self.conn = psycopg2.connect(
             host=os.getenv('PG_HOST'),
-            dbname=os.getenv('PG_DB'),
+            dbname=os.getenv('PG_DBNAME'),
             user=os.getenv('PG_USER'),
             password=os.getenv('PG_PASSWORD')
         )
