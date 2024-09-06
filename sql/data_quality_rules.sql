@@ -1,12 +1,3 @@
-CREATE TABLE payroll.quarantine_data (
-    id SERIAL PRIMARY KEY,
-    source_table_name TEXT,
-    original_data JSONB,
-    error_type TEXT,
-    error_details TEXT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
 CREATE OR REPLACE FUNCTION payroll.validate_and_quarantine_payroll_data() 
 RETURNS TRIGGER AS $$
 BEGIN
