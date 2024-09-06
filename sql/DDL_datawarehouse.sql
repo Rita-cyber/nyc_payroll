@@ -5,6 +5,14 @@ CREATE TABLE payroll.error_log (
     error_time TIMESTAMP
 );
 
+CREATE TABLE payroll.quarantine_data (
+    id SERIAL PRIMARY KEY,
+    source_table_name TEXT,
+    original_data JSONB,
+    error_type TEXT,
+    error_details TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
 CREATE TABLE payroll.dim_employee (
 	--id serial primary key,
