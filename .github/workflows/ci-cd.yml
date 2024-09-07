@@ -72,10 +72,7 @@ jobs:
         run: |
           pip install --upgrade --force-reinstall -r requirements.txt
 
-      - name: Set up PostgreSQL
-        uses: harmon758/postgresql-action@v1
-        with:
-          postgresql-version: '16'
+      
           
 
       - name: Run data_quality_rules_functions
