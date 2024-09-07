@@ -24,6 +24,7 @@ jobs:
           --health-retries 5
         ports:
           - 5432:5432
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -41,6 +42,11 @@ jobs:
       - name: Install Python dependencies
         run: |
           pip install --upgrade --force-reinstall -r requirements.txt
+
+      
+      - name: Change ownership of pgdata
+        run: |
+              sudo chown -R $USER:$USER /home/runner/work/nyc_payroll/nyc_payroll/pgdata
 
       - name: Verify installed packages
         run: |
