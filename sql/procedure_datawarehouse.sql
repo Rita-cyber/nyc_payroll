@@ -4,7 +4,7 @@ AS $$
 BEGIN
     -- Insert into dim_employee
     BEGIN
-        INSERT INTO payroll.dim_employee (employee_id, last_name, first_name, work_location_borough, leavestatusasofjune30)
+        INSERT INTO payroll.dim_employee (employee_id, last_name, first_name, worklocationborough, leavestatusasofjune30)
         SELECT DISTINCT
             s.employeeid,  
             s.lastname,    
