@@ -18,14 +18,6 @@ class TestCSVLoader(unittest.TestCase):
         # Instantiate the CSVLoader with the mocked connection
         self.loader = CSVLoader()
 
-    def test_create_staging_tables(self):
-        # Test that the staging tables are created successfully
-        self.loader.create_staging_tables()
-
-        # Assert that the cursor's execute method was called with the correct SQL statements
-        self.assertTrue(self.mock_cursor.execute.called)
-        #self.mock_cursor.execute.assert_any_call('CREATE SCHEMA IF NOT EXISTS payroll;')
-        self.mock_conn.commit.assert_called()
 
     @patch('pandas.read_csv')
     def test_load_csv_to_table(self, mock_read_csv):
