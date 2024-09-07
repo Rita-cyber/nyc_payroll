@@ -25,7 +25,7 @@ The CICD workflow was implemented using Github Actions Workflow; the cicd yaml i
 2)The company's development process has benefited from the CI/CD deployment, as evidenced by quicker build times and more frequent deployments.
 
            Clone Repository
-git clone 
+git clone https://github.com/Rita-cyber/nyc_payroll
 
 
             
