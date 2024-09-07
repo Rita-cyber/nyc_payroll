@@ -18,8 +18,6 @@ def main():
 
     loader = CSVLoader()
     
-    # Step 1: Create the staging tables
-    loader.create_staging_tables()
     
     # Step 2: Load each CSV file into its corresponding staging table
     csv_to_table_mapping = {
