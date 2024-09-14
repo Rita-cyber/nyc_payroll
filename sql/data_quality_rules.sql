@@ -18,7 +18,8 @@ BEGIN
         INSERT INTO payroll.quarantine_data (source_table_name, original_data, error_type, error_details)
         VALUES (TG_TABLE_NAME, row_to_json(NEW), 'Null Value', 'AgencyID cannot be null');
         RETURN NULL;  -- Skip the insert into the original table
-	ELSIF (NEW."agencyname" IS NULL) THEN
+
+    ELSIF (NEW."agencyname" IS NULL) THEN
         INSERT INTO payroll.quarantine_data (source_table_name, original_data, error_type, error_details)
         VALUES (TG_TABLE_NAME, row_to_json(NEW), 'Null Value', 'AgencyName cannot be null');
         RETURN NULL;
@@ -28,23 +29,23 @@ BEGIN
         INSERT INTO payroll.quarantine_data (source_table_name, original_data, error_type, error_details)
         VALUES (TG_TABLE_NAME, row_to_json(NEW), 'Null Value', 'EmployeeID cannot be null');
         RETURN NULL;  -- Skip the insert into the original table
-	ELSIF (NEW."lastname" IS NULL) THEN
+    ELSIF (NEW."lastname" IS NULL) THEN
         INSERT INTO payroll.quarantine_data (source_table_name, original_data, error_type, error_details)
         VALUES (TG_TABLE_NAME, row_to_json(NEW), 'Null Value', 'lastname cannot be null');
         RETURN NULL;
-	ELSIF (NEW."firstname" IS NULL) THEN
+    ELSIF (NEW."firstname" IS NULL) THEN
         INSERT INTO payroll.quarantine_data (source_table_name, original_data, error_type, error_details)
         VALUES (TG_TABLE_NAME, row_to_json(NEW), 'Null Value', 'firstname cannot be null');
         RETURN NULL;
-	ELSIF (NEW."agencystartdate" IS NULL) THEN
+    ELSIF (NEW."agencystartdate" IS NULL) THEN
         INSERT INTO payroll.quarantine_data (source_table_name, original_data, error_type, error_details)
         VALUES (TG_TABLE_NAME, row_to_json(NEW), 'Null Value', 'Agencystartdate cannot be null');
         RETURN NULL;
-	ELSIF (NEW."worklocationborough" IS NULL) THEN
+    ELSIF (NEW."worklocationborough" IS NULL) THEN
         INSERT INTO payroll.quarantine_data (source_table_name, original_data, error_type, error_details)
         VALUES (TG_TABLE_NAME, row_to_json(NEW), 'Null Value', 'worklocationborough cannot be null');
         RETURN NULL;
-	ELSIF NEW."titlecode"::integer IS NULL OR NEW."titlecode"::integer < 0) THEN
+    ELSIF NEW."titlecode"::integer IS NULL OR NEW."titlecode"::integer < 0) THEN
         INSERT INTO payroll.quarantine_data (source_table_name, original_data, error_type, error_details)
         VALUES (TG_TABLE_NAME, row_to_json(NEW), 'Null Value', 'titlecode cannot be null');
         RETURN NULL;
@@ -52,7 +53,7 @@ BEGIN
         INSERT INTO payroll.quarantine_data (source_table_name, original_data, error_type, error_details)
         VALUES (TG_TABLE_NAME, row_to_json(NEW), 'Null Value', 'titledescription cannot be null');
         RETURN NULL;
-	ELSIF (NEW."leavestatusasofjune30" IS NULL) THEN
+    ELSIF (NEW."leavestatusasofjune30" IS NULL) THEN
         INSERT INTO payroll.quarantine_data (source_table_name, original_data, error_type, error_details)
         VALUES (TG_TABLE_NAME, row_to_json(NEW), 'Null Value', 'leavestatusasofjune30 cannot be null');
         RETURN NULL;
@@ -62,27 +63,27 @@ BEGIN
         INSERT INTO payroll.quarantine_data (source_table_name, original_data, error_type, error_details)
         VALUES (TG_TABLE_NAME, row_to_json(NEW), 'Invalid Value', 'BaseSalary cannot be null or negative');
         RETURN NULL;  -- Skip the insert into the original table
-	ELSIF (NEW."paybasis" IS NULL) THEN
+    ELSIF (NEW."paybasis" IS NULL) THEN
         INSERT INTO payroll.quarantine_data (source_table_name, original_data, error_type, error_details)
         VALUES (TG_TABLE_NAME, row_to_json(NEW), 'Null Value', 'PayBasis cannot be null');
         RETURN NULL;
-	ELSIF (NEW."regularhours" IS NULL) THEN
+    ELSIF (NEW."regularhours" IS NULL) THEN
         INSERT INTO payroll.quarantine_data (source_table_name, original_data, error_type, error_details)
         VALUES (TG_TABLE_NAME, row_to_json(NEW), 'Null Value', 'regularhours cannot be null');
         RETURN NULL;
-	ELSIF (NEW."regulargrosspaid" IS NULL) THEN
+    ELSIF (NEW."regulargrosspaid" IS NULL) THEN
         INSERT INTO payroll.quarantine_data (source_table_name, original_data, error_type, error_details)
         VALUES (TG_TABLE_NAME, row_to_json(NEW), 'Null Value', 'regulargrosspaid cannot be null');
         RETURN NULL;
-	ELSIF (NEW."othours" IS NULL) THEN
+    ELSIF (NEW."othours" IS NULL) THEN
         INSERT INTO payroll.quarantine_data (source_table_name, original_data, error_type, error_details)
         VALUES (TG_TABLE_NAME, row_to_json(NEW), 'Null Value', 'othours cannot be null');
         RETURN NULL;
-	ELSIF (NEW."totalotpaid" IS NULL) THEN
+    ELSIF (NEW."totalotpaid" IS NULL) THEN
         INSERT INTO payroll.quarantine_data (source_table_name, original_data, error_type, error_details)
         VALUES (TG_TABLE_NAME, row_to_json(NEW), 'Null Value', 'totalotpaid cannot be null');
         RETURN NULL;
-	ELSIF (NEW."totalotherpay" IS NULL) THEN
+    ELSIF (NEW."totalotherpay" IS NULL) THEN
         INSERT INTO payroll.quarantine_data (source_table_name, original_data, error_type, error_details)
         VALUES (TG_TABLE_NAME, row_to_json(NEW), 'Null Value', 'totalotherpaid cannot be null');
         RETURN NULL;
@@ -137,7 +138,7 @@ BEGIN
         INSERT INTO payroll.quarantine_data (source_table_name, original_data, error_type, error_details)
         VALUES (TG_TABLE_NAME, row_to_json(NEW), 'Null Value', 'lastName cannot be null');
         RETURN NULL;
-	ELSIF (NEW."firstname" IS NULL) THEN
+    ELSIF (NEW."firstname" IS NULL) THEN
         INSERT INTO payroll.quarantine_data (source_table_name, original_data, error_type, error_details)
         VALUES (TG_TABLE_NAME, row_to_json(NEW), 'Null Value', 'firstname cannot be null');
         RETURN NULL;
